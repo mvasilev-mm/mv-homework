@@ -1,6 +1,6 @@
 package com.IntroToJava;
 
-public class Exercise_1 {
+public class PrintFullName {
     public static void main(String[] args) {
         String firstName = "Martin";
         String middleName = "Lyubchov";

@@ -2,7 +2,7 @@ package com.IntroToJava;
 
 import java.util.Scanner;
 
-public class Exercise_2 {
+public class TrianglePerimeter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

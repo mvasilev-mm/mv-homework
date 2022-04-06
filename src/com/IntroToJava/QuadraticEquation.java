@@ -2,7 +2,7 @@ package com.IntroToJava;
 
 import java.util.Scanner;
 
-public class Exercise_6 {
+public class QuadraticEquation {
     public static void main(String[] args) {
         double firstRoot = 0;
         double secondRoot = 0;

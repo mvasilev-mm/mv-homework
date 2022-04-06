@@ -2,7 +2,7 @@ package com.IntroToJava;
 
 import java.util.Scanner;
 
-public class Exercise_3 {
+public class TriangleArea {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
