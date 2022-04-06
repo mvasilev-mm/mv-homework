@@ -1,3 +1,5 @@
+package com.IntroToJava;
+
 public class Exercise_1 {
     public static void main(String[] args) {
         String firstName = "Martin";
