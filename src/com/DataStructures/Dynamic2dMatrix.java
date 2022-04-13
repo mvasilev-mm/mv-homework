@@ -7,8 +7,10 @@ public class Dynamic2dMatrix {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int[][] dynamicMatrix = new int[4][3];
-        for (int row = 0; row < 4; row++) {
+        int matrixRows = 4;
+        int matrixColumns = 3;
+        int[][] dynamicMatrix = new int[matrixRows][matrixColumns];
+        for (int row = 0; row < matrixRows; row++) {
                 System.out.printf("Enter three numbers delimeted by interval for row %d: ", row+1);
 
                 int[] tempArray = Arrays.stream(scanner.nextLine().split(" "))
@@ -18,8 +20,8 @@ public class Dynamic2dMatrix {
                 dynamicMatrix[row][2] = tempArray[2];
         }
 
-        for (int row = 0; row < 4; row++) {
-            for (int column = 0; column < 3; column++) {
+        for (int row = 0; row < matrixRows; row++) {
+            for (int column = 0; column < matrixColumns; column++) {
                 System.out.print(dynamicMatrix[row][column] + " ");
             }
             System.out.println();

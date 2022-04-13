@@ -7,8 +7,9 @@ public class MatrixDiagonalSum {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int[][] dynamicMatrix = new int[4][4];
-        for (int row = 0; row < 4; row++) {
+        int matrixNxN = 4;
+        int[][] dynamicMatrix = new int[matrixNxN][matrixNxN];
+        for (int row = 0; row < matrixNxN; row++) {
             System.out.printf("Enter four numbers delimeted by interval for row %d: ", row+1);
 
             int[] tempArray = Arrays.stream(scanner.nextLine().split(" "))
@@ -19,8 +20,8 @@ public class MatrixDiagonalSum {
             dynamicMatrix[row][3] = tempArray[2];
         }
 
-        for (int row = 0; row < 4; row++) {
-            for (int column = 0; column < 4; column++) {
+        for (int row = 0; row < matrixNxN; row++) {
+            for (int column = 0; column < matrixNxN; column++) {
                 System.out.print(dynamicMatrix[row][column] + " ");
             }
             System.out.println();
@@ -28,8 +29,8 @@ public class MatrixDiagonalSum {
         System.out.println();
 
         int summedDiagonal = 0;
-        for (int row = 0; row < 4; row++) {
-            for (int column = 0; column < 4; column++) {
+        for (int row = 0; row < matrixNxN; row++) {
+            for (int column = 0; column < matrixNxN; column++) {
                 if (column == row) {
                     summedDiagonal += dynamicMatrix[row][column];
                 }
