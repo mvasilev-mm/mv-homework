@@ -1,4 +1,4 @@
-package com.IntroToJava2;
+package com.DataStructures;
 
 import java.util.Arrays;
 import java.util.Scanner;
