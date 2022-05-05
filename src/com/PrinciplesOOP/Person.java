@@ -28,6 +28,8 @@ public class Person {
         dateOfBirth = addDoB();
         this.age = age;
         this.country = country;
+
+        sayHello(name, sex, religion, languageSpoken, job, nationality, age, country);
     }
 
     public String addEGN(){
@@ -76,10 +78,63 @@ public class Person {
         }
     }
 
+    public void sayHello(String name, String sex, String religion, String languageSpoken, String job, String nationality, String age, String country) {
+        System.out.printf("Hello, my name is %s! I am %s, %s years-old. I work as %s.\n", age, name, sex, job);
+        System.out.printf("I am %s from %s and speak %s.\n", nationality, country, languageSpoken);
+
+        celebrateEaster(religion);
+        isAdult(age, country);
+    }
+
+    public void celebrateEaster(String religion) {
+        String religionToLowerCase = religion.toLowerCase();
+        if (religionToLowerCase.equals("orthodox") || religionToLowerCase.equals("catholic") || religionToLowerCase.equals("christian")) {
+            System.out.printf("I am a %s so I celebrate Easter!\n", religion);
+        }
+        else {
+            System.out.println("I am not a Christian so I don't celebrate Easter!");
+        }
+    }
+
+    public void isAdult(String age, String country) {
+        int personAge = Integer.parseInt(age);
+        String countryToLowerCase = country.toLowerCase();
+
+        if (countryToLowerCase.equals("bulgaria")) {
+
+            if (personAge > 18) {
+                System.out.println("I am an Adult.");
+            }
+            else {
+                System.out.println("I am not an Adult yet.");
+            }
+        }
+        else if (countryToLowerCase.equals("italy")) {
+            if (personAge > 18) {
+                System.out.println("I am an Adult.");
+            }
+            else {
+                System.out.println("I am not an Adult yet.");
+            }
+        }
+        else if (countryToLowerCase.equals("usa")) {
+            if (personAge > 21) {
+                System.out.println("I am an Adult.");
+            }
+            else {
+                System.out.println("I am not an Adult yet.");
+            }
+        }
+        else {
+            System.out.println("I am feeling as an Adult but I am not sure if I am one.");
+        }
+    }
+
     public static void main(String[] args) {
 
-        Person person1 = new Person("Martina","female","christian","BG","QA","bulgarian","28","bulgaria");
-        Person person2 = new Person("Kirilichka","unknown","christian","BG","QA","bulgarian","28","bulgaria");
+        Person person1 = new Person("Martina","female","christian","bulgarian","QA","bulgarian","28","Bulgaria");
+        Person person2 = new Person("Kirilichka","unknown","Orthodox","bulgarian","Project Manager","bulgarian","28","Bulgaria");
+        Person person3 = new Person("Mohammed Salah","male","Islam","Arabic","Footballer","egyptian","29","Egypt");
 
     }
 }
