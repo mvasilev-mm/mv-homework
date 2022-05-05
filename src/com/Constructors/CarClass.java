@@ -15,7 +15,7 @@ public class CarClass {
         this.secondHand = secondHand;
     }
 
-    public CarClass(String name, String color, boolean secondHand) {
+    public CarClass(String name, String colour, boolean secondHand) {
         this.name = name;
         this.colour = colour;
         horsePower = -1;
